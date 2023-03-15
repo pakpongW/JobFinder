@@ -27,7 +27,7 @@ const Home = () => {
             <div className="carousel-item custom-height active">
               <img
                 src={wallpaper2}
-                className="d-block w-100"
+                className="d-block w-100 opacity-75"
                 alt="Carousel item 1"
               />
               <div className="container">
@@ -52,7 +52,7 @@ const Home = () => {
             <div className="carousel-item custom-height">
               <img
                 src={wallpaper1}
-                className="d-block w-100"
+                className="d-block w-100 opacity-75"
                 alt="Carousel item 2"
               />
               <div className="container">
@@ -70,19 +70,19 @@ const Home = () => {
             <div className="carousel-item custom-height">
               <img
                 src={wallpaper3}
-                className="d-block w-100"
+                className="d-block w-100 opacity-75"
                 alt="Carousel item 3"
               />
               <div className="container">
                 <div className="carousel-caption text-end blackText">
-                  <h1>One more for good measure.</h1>
+                  <h1>Let find your job.</h1>
                   <p>
                     Some representative placeholder content for the third slide
                     of the carousel.
                   </p>
                   <p>
                     <a className="btn btn-lg btn-primary" href="#">
-                      Browse gallery
+                      see job
                     </a>
                   </p>
                 </div>

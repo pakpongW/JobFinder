@@ -40,28 +40,34 @@ const LoginPage = () => {
   return (
     <AnimatedPage>
       {/* {JSON.stringify(auth)} */}
-      <form onSubmit={submitForm}>
-        <div className="from-group">
-          <label>username</label>
+      <div className="p-5">
+        <form onSubmit={submitForm}>
+          <div className="from-group">
+            <label>username</label>
+            <input
+              type="text"
+              className="form-control"
+              value={username}
+              onChange={inputValue("username")}
+            />
+          </div>
+          <div className="from-group">
+            <label>password</label>
+            <input
+              type="password"
+              className="form-control"
+              value={password}
+              onChange={inputValue("password")}
+            />
+          </div>
+          <br />
           <input
-            type="text"
-            className="form-control"
-            value={username}
-            onChange={inputValue("username")}
+            type="submit"
+            value="เข้าสู่ระบบ"
+            className="btn btn-primary"
           />
-        </div>
-        <div className="from-group">
-          <label>password</label>
-          <input
-            type="password"
-            className="form-control"
-            value={password}
-            onChange={inputValue("password")}
-          />
-        </div>
-        <br />
-        <input type="submit" value="เข้าสู่ระบบ" className="btn btn-primary" />
-      </form>
+        </form>
+      </div>
     </AnimatedPage>
   );
 };
