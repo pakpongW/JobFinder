@@ -25,6 +25,7 @@ body {
     flex-wrap: wrap;
     justify-content:center;
     gap: 80px;
+    margin-bottom: 20px;
   }
   
   @media (max-width: 800px) {
@@ -43,6 +44,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease-in-out;
     cursor: default;
+    box-shadow: 7px 7px #696767;
   }
   
   .info-box:hover {
