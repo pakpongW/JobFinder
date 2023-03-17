@@ -51,7 +51,7 @@ const myPost = () => {
 
   return (
     <AnimatedPage>
-      <div className="d-grid gap-2 col-6 mx-auto mt-4">
+      <div className="d-grid gap-2 col-9 mx-auto mt-4">
         <Link to="../createPost" className="btn btn-success">
           โพสต์
         </Link>

@@ -7,22 +7,7 @@ import { useEffect, useState } from "react";
 const Jobs = () => {
   const [posts, setPosts] = useState([]);
   const [showPosts, setShowposts] = useState([]);
-  const [usernames, setUsernames] = useState([]);
   const [input, setInput] = useState("");
-
-  const findUsername = (accountID) => {
-    axios
-      .post(`${import.meta.env.VITE_APP_API}/accountInfo`, { accountID })
-      .then((response) => {
-        // console.log(response);
-
-        setUsernames((prevState) => ({
-          ...prevState,
-          [accountID]: response.data.username,
-        }));
-      })
-      .catch((err) => alert(err));
-  };
 
   const fetchData = () => {
     axios
@@ -50,9 +35,7 @@ const Jobs = () => {
         if (
           posts[i].title.toLowerCase().includes(input.toLowerCase()) ||
           posts[i].details.toLowerCase().includes(input.toLowerCase()) ||
-          (
-            usernames[posts[i].author_id] || findUsername(posts[i].author_id)
-          ).includes(input.toLowerCase())
+          posts[i].author.toLowerCase().includes(input.toLowerCase())
         ) {
           // work on the first time setShowdata
           if (nodata) {
@@ -110,9 +93,8 @@ const Jobs = () => {
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
               <p className="text-muted pt-2">
-                ผู้โพสต์:{" "}
-                {usernames[post.author_id] || findUsername(post.author_id)}{" "}
-                เผยแพร่: {new Date(post.createdAt).toLocaleString()}
+                ผู้โพสต์: {post.author} , เผยแพร่:{" "}
+                {new Date(post.createdAt).toLocaleString()}
               </p>
             </div>
           </div>

@@ -14,7 +14,7 @@ import CompanyRoute from "../services/CompanyRoute";
 const AnimatedRouter = () => {
   return (
     <AnimatePresence>
-      <div>
+      <div className="container-sm mt-3">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Jobs" element={<Jobs />} />

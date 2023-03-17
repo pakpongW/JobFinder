@@ -80,8 +80,8 @@ img {
   justify-content: space-between;
   align-items: center;
   min-height: 250px;
-  height: 300px;
-  width: 50%;
+  height: 200px;
+  width: 75%;
   margin: auto;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -89,7 +89,7 @@ img {
   border: 0.5px solid #889397;
   border-radius: 10px;
   background: white;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
 }
 
@@ -98,8 +98,8 @@ img {
 }
 
 .postCard:hover {
-  height: 310px;
-  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  height: 210px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .blackText {
