@@ -8,7 +8,7 @@ import wallpaper3 from "../picture/wallpaper3.jpg";
 import pic1 from "../picture/homepic1.png";
 import pic2 from "../picture/homepic2.png";
 import pic3 from "../picture/homepic3.png";
-import "./Home.css";
+import "../../Home.css";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -138,14 +138,13 @@ const Home = () => {
         <div className="row featurette mt-5 mb-5">
           <div className="col-md-6">
             <h2 className="featurette-heading">
-              First festurette heading.
-              <span className="text-muted">It'll blow your mind.</span>
+              The Seeker,
+              <span className="text-muted">looking for work to do.</span>
             </h2>
             <p className="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
+              In the part of the seeker, we will prepare the employment
+              announcement that you want, just tell us your requirements and we
+              will find it for you.
             </p>
           </div>
           <div className="col-md-6">
@@ -158,14 +157,13 @@ const Home = () => {
         <div className="row featurette mt-5 mb-5">
           <div className="col-md-6 order-md-2">
             <h2 className="featurette-heading">
-              First festurette heading.
-              <span className="text-muted">It'll blow your mind.</span>
+              The Company,
+              <span className="text-muted"> looking for people to work.</span>
             </h2>
             <p className="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
+              In the part of the employer, we will have a system that will allow
+              you to post to tell job details to people interested in the line
+              of work that we have open.
             </p>
           </div>
           <div className="col-md-6 order-md-1">
@@ -178,14 +176,14 @@ const Home = () => {
         <div className="row featurette mt-5 mb-5">
           <div className="col-md-6">
             <h2 className="featurette-heading">
-              First festurette heading.
-              <span className="text-muted">It'll blow your mind.</span>
+              Opportunity.
+              <span className="text-muted">
+                we have it for you to get the desired job.
+              </span>
             </h2>
             <p className="lead">
-              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-              ligula porta felis euismod semper. Praesent commodo cursus magna,
-              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.
+              Everyone can find the job they want by typing in what they want to
+              do and we will prepare it for you.
             </p>
           </div>
           <div className="col-md-6">

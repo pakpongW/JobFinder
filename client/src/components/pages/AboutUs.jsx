@@ -4,7 +4,7 @@ import pic2 from "../picture/wallpaper1.jpg";
 import pic3 from "../picture/wallpaper2.jpg";
 import pic4 from "../picture/wallpaper3.jpg";
 import banner from "../picture/about_us_pic.jpg";
-import "./AboutUs.css";
+import "../../AboutUs.css";
 import { color } from "framer-motion";
 
 function Box({ children, ...props }) {

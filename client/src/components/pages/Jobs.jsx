@@ -3,7 +3,7 @@ import axios from "axios";
 
 import AnimatedPage from "../AnimatedPage";
 import { useEffect, useState } from "react";
-import "./Jobs.css";
+import "../../Jobs.css";
 
 const Jobs = () => {
   const [posts, setPosts] = useState([]);
