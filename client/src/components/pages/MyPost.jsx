@@ -53,7 +53,7 @@ const myPost = () => {
     <AnimatedPage>
       <div className="d-grid gap-2 col-9 mx-auto mt-4">
         <Link to="../createPost" className="btn btn-success">
-          โพสต์
+          สร้างโพสต์
         </Link>
       </div>
       {posts.length === 0 && (
@@ -70,6 +70,9 @@ const myPost = () => {
             <div className="pt-3">{post.details.substring(0, 300)}</div>
             {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
             {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
+            <div class="badge bg-primary text-wrap">
+                ตำแหน่ง : {post.role}
+              </div>
             <p className="text-muted">
               ผู้โพสต์: You , เผยแพร่ :{" "}
               {new Date(post.createdAt).toLocaleString()}

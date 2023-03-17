@@ -3,6 +3,7 @@ import axios from "axios";
 
 import AnimatedPage from "../AnimatedPage";
 import { useEffect, useState } from "react";
+import "./Jobs.css";
 
 const Jobs = () => {
   const [posts, setPosts] = useState([]);
@@ -92,6 +93,9 @@ const Jobs = () => {
               <div className="pt-2">{post.details.substring(0, 300)}</div>
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
+              <div class="badge bg-primary text-wrap">
+                ตำแหน่ง : {post.role}
+              </div>
               <p className="text-muted pt-2">
                 ผู้โพสต์: {post.author} , เผยแพร่:{" "}
                 {new Date(post.createdAt).toLocaleString()}
