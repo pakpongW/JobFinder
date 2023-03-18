@@ -13,7 +13,7 @@ import parintorn_pic from "./components/picture/Groupmembers/parintorn.jpg"
 
 const groupMembers = [
   {
-    name: "",
+    name: "Aoranun Rojsatitpong",
     picture: aoranun_pic,
     email: "s5901012630156@email.kmutnb.ac.th",
     stdID: 5901012630156 ,
@@ -43,7 +43,7 @@ const groupMembers = [
   {
     name: "Nathanan Srijant",
     picture: nathanan_pic,
-    email: "6301012630095@email.kmutnb.ac.th",
+    email: "s6301012630095@email.kmutnb.ac.th",
     stdID: 6301012630095 ,
     year: 3,
   },
