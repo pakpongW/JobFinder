@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticate, getUser } from "../../services/authorize";
 import AnimatedPage from "../AnimatedPage";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -23,12 +24,20 @@ const LoginPage = () => {
     axios
       .post(`${import.meta.env.VITE_APP_API}/login`, { username, password })
       .then((response) => {
-        alert("successfully");
+        Swal.fire({
+          icon: "success",
+          title: "Login successful",
+          text: "Let's start!",
+        });
         console.log(response);
         authenticate(response, () => navigate("/"));
       })
       .catch((err) => {
-        alert(err.response.data.err);
+        Swal.fire({
+          icon: "error",
+          title: "Please try again",
+          text: "Your username or password is incorrect",
+        });
         // console.log(err.response.data.err)
       });
   };

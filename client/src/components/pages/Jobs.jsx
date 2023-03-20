@@ -93,7 +93,7 @@ const Jobs = () => {
               <div className="pt-2">{post.details.substring(0, 300)}</div>
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
-              <div class="badge bg-primary text-wrap">
+              <div className="badge bg-primary text-wrap">
                 ตำแหน่ง : {post.role}
               </div>
               <p className="text-muted pt-2">
@@ -106,7 +106,10 @@ const Jobs = () => {
       ) : (
         <>
           <div className="notfound">
-            <h2>"Not found"</h2>
+            <center>
+              <h2>ไม่มีโพสต์ที่คุณหาโดยคำว่า</h2>
+              <h3>"{input}"</h3>
+            </center>
           </div>
         </>
       )}

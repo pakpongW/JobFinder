@@ -50,12 +50,6 @@
   background-position: 100% center;
 }
 
-.notfound {
-  margin: auto;
-  width: 24%;
-  padding-top: 50px;
-}
-
 .postCard {
   display: flex;
   flex-wrap: nowrap;

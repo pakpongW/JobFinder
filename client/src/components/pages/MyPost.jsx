@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { getToken } from "../../services/authorize";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const myPost = () => {
   const navigate = useNavigate();
@@ -34,15 +35,21 @@ const myPost = () => {
         fetchData();
       })
       .catch((err) => console.log(err));
-    alert("Deleted");
+    Swal.fire("Delete complete!", "", "success");
     fetchData();
   };
 
   const confirmDelete = (slug) => {
-    const result = window.confirm("คุณต้องการลบบทความหรือไม่?");
-    if (result) {
-      deletePost(slug);
-    }
+    Swal.fire({
+      icon: "info",
+      title: "Do you want to delete this post?",
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deletePost(slug);
+      }
+    });
   };
 
   useEffect(() => {
@@ -57,9 +64,11 @@ const myPost = () => {
         </Link>
       </div>
       {posts.length === 0 && (
-        <center>
-          <p>ไม่มีโพสต์</p>
-        </center>
+        <div className="notfound">
+          <center>
+            <h2>ไม่มีโพสต์</h2>
+          </center>
+        </div>
       )}
       {posts.map((post, index) => (
         <div className="postCard" key={index}>
@@ -70,9 +79,9 @@ const myPost = () => {
             <div className="pt-3">{post.details.substring(0, 300)}</div>
             {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
             {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
-            <div class="badge bg-primary text-wrap">
-                ตำแหน่ง : {post.role}
-              </div>
+            <div className="badge bg-primary text-wrap">
+              ตำแหน่ง : {post.role}
+            </div>
             <p className="text-muted">
               ผู้โพสต์: You , เผยแพร่ :{" "}
               {new Date(post.createdAt).toLocaleString()}

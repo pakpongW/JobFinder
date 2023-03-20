@@ -10,5 +10,9 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #ffffffc1;
+}
+
+.notfound {
+  padding-top: 50px;
 }
