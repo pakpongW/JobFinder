@@ -16,3 +16,13 @@ body {
 .notfound {
   padding-top: 50px;
 }
+
+.side-picture {
+  width: 600px;
+  height: 600px;
+}
+
+.logo-picture {
+  width: 50px;
+  height: 50px;
+}

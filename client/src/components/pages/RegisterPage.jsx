@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../AnimatedPage";
+import mainpic from ".././picture/mainpic.png";
+import Joblogo from ".././picture/Joblogo.png";
 import Swal from "sweetalert2";
 
 const RegisterPage = () => {
@@ -86,86 +88,103 @@ const RegisterPage = () => {
   return (
     <AnimatedPage>
       <div className=" p-5">
-        <form onSubmit={submitForm}>
-          {/* {JSON.stringify(auth)} */}
-          <div className="form-group mt-3">
-            <label>email</label>
-            <input
-              type="text"
-              className="form-control"
-              value={email}
-              onChange={inputValue("email")}
-            />
-          </div>
-
-          <div className="form-group mt-3">
-            <label>username</label>
-            <input
-              type="text"
-              className="form-control"
-              value={username}
-              onChange={inputValue("username")}
-            />
-          </div>
-
-          <div className="form-group mt-3">
-            <label>password</label>
-            <input
-              type="password"
-              className="form-control"
-              value={password}
-              onChange={inputValue("password")}
-            />
-          </div>
-
-          <div className="form-group mt-3">
-            <label>confirm password</label>
-            <input
-              type="password"
-              className="form-control"
-              value={confirmpassword}
-              onChange={inputValue("confirmpassword")}
-            />
-          </div>
-
-          <div className="form-group mt-3">
-            <label>Role</label>
-            <select
-              className="form-select"
-              aria-label="Default select example"
-              value={role}
-              onChange={inputValue("role")}
-            >
-              <option value="">Open this select menu</option>
-              <option value="Seeker">Seeker</option>
-              <option value="Company">Company</option>
-            </select>
-          </div>
-
-          {role && (
-            <div className="form-group mt-3">
-              <label>{label_info1}</label>
-              <input
-                type="text"
-                className="form-control"
-                value={info1}
-                onChange={inputValue("info1")}
-              />
-              {/* </div>
-        <div className="form-group mt-3"> */}
-              <label>{label_info2}</label>
-              <input
-                type="text"
-                className="form-control"
-                value={info2}
-                onChange={inputValue("info2")}
-              />
+        <div className="row featurette p-3">
+          <div className="col-md-6 my-auto">
+            <div className="text-center mb-4">
+              <img className="logo-picture" src={Joblogo} />
             </div>
-          )}
+            <form onSubmit={submitForm}>
+              {/* {JSON.stringify(auth)} */}
+              <div className="form-group mt-3">
+                <label>email</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={email}
+                  onChange={inputValue("email")}
+                />
+              </div>
 
-          <br />
-          <input type="submit" value="register" className="btn btn-primary" />
-        </form>
+              <div className="form-group mt-3">
+                <label>username</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={username}
+                  onChange={inputValue("username")}
+                />
+              </div>
+
+              <div className="form-group mt-3">
+                <label>password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  value={password}
+                  onChange={inputValue("password")}
+                />
+              </div>
+
+              <div className="form-group mt-3">
+                <label>confirm password</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  value={confirmpassword}
+                  onChange={inputValue("confirmpassword")}
+                />
+              </div>
+
+              <div className="form-group mt-3">
+                <label>Role</label>
+                <select
+                  className="form-select"
+                  aria-label="Default select example"
+                  value={role}
+                  onChange={inputValue("role")}
+                >
+                  <option value="">Open this select menu</option>
+                  <option value="Seeker">Seeker</option>
+                  <option value="Company">Company</option>
+                </select>
+              </div>
+
+              {role && (
+                <div className="form-group mt-3">
+                  <label>{label_info1}</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={info1}
+                    onChange={inputValue("info1")}
+                  />
+                  {/* </div>
+        <div className="form-group mt-3"> */}
+                  <label>{label_info2}</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={info2}
+                    onChange={inputValue("info2")}
+                  />
+                </div>
+              )}
+
+              <br />
+              <input
+                type="submit"
+                value="register"
+                className="btn btn-primary"
+              />
+            </form>
+          </div>
+          <div className="col-md-6">
+            <img
+              className="featurette-image img-fluid my-auto side-picture"
+              src={mainpic}
+            />
+          </div>
+        </div>
       </div>
     </AnimatedPage>
   );

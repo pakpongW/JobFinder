@@ -1,14 +1,13 @@
-import pic1 from "./components/picture/pic1.jpg";
-import sirasit_pic from "./components/picture/Groupmembers/sirasit.jpg";
-import tanachat_pic from "./components/picture/Groupmembers/tanachat.jpg";
-import aoranun_pic from "./components/picture/Groupmembers/aoranun.jpg";
-import sirapa_pic from "./components/picture/Groupmembers/sirapa.jpg";
-import pakpong_pic from "./components/picture/Groupmembers/pakpong.jpg";
-import sirapop_pic from "./components/picture/Groupmembers/sirapop.jpg";
-import apiravit_pic from "./components/picture/Groupmembers/apiravit.jpg";
-import sahassawat_pic from "./components/picture/Groupmembers/sahassawat.jpg";
-import nathanan_pic from "./components/picture/Groupmembers/nathanan.jpg";
-import parintorn_pic from "./components/picture/Groupmembers/parintorn.jpg";
+import sirasit_pic from "../picture/GroupMembers/sirasit.jpg";
+import tanachat_pic from "../picture/GroupMembers/tanachat.jpg";
+import aoranun_pic from "../picture/Groupmembers/aoranun.jpg";
+import sirapa_pic from "../picture/Groupmembers/sirapa.jpg";
+import pakpong_pic from "../picture/Groupmembers/pakpong.jpg";
+import sirapop_pic from "../picture/Groupmembers/sirapop.jpg";
+import apiravit_pic from "../picture/Groupmembers/apiravit.jpg";
+import sahassawat_pic from "../picture/Groupmembers/sahassawat.jpg";
+import nathanan_pic from "../picture/Groupmembers/nathanan.jpg";
+import parintorn_pic from "../picture/Groupmembers/parintorn.jpg";
 
 const groupMembers = [
   {

@@ -1,5 +1,5 @@
 import AnimatedPage from "../AnimatedPage";
-import groupMembers from "../../groupMembers.jsx";
+import groupMembers from "./groupMembers.jsx";
 import banner from "../picture/about_us_pic.jpg";
 import "../../AboutUs.css";
 import { color } from "framer-motion";
