@@ -81,21 +81,23 @@ const Jobs = () => {
       </div>
       {showPosts ? (
         showPosts.map((post, index) => (
-          <div
-            className="postCard"
-            key={index}
-            style={{ borderBottom: "1px solid silver" }}
-          >
-            <div className="col pt-2 pb-2">
+          <div className="card postCard" key={index}>
+            <div className="card-title">
               <Link to={`/Jobs/${post.slug}`}>
                 <h3>{post.title}</h3>
               </Link>
-              <div className="pt-2">{post.details.substring(0, 300)}</div>
+            </div>
+            <div className="card-text mb-2">
+              {post.details.substring(0, 300)}
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
               {/* <div className="pt-3">{post.details.info2.substring(0, 300)}</div> */}
+            </div>
+            <div className="card-text mb-2">
               <div className="badge bg-primary text-wrap">
                 ตำแหน่ง : {post.role}
               </div>
+            </div>
+            <div className="card-text">
               <p className="text-muted pt-2">
                 ผู้โพสต์: {post.author} , เผยแพร่:{" "}
                 {new Date(post.createdAt).toLocaleString()}
