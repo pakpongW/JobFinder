@@ -1,13 +1,13 @@
 import sirasit_pic from "../picture/GroupMembers/sirasit.jpg";
 import tanachat_pic from "../picture/GroupMembers/tanachat.jpg";
-import aoranun_pic from "../picture/Groupmembers/aoranun.jpg";
-import sirapa_pic from "../picture/Groupmembers/sirapa.jpg";
-import pakpong_pic from "../picture/Groupmembers/pakpong.jpg";
-import sirapop_pic from "../picture/Groupmembers/sirapop.jpg";
-import apiravit_pic from "../picture/Groupmembers/apiravit.jpg";
-import sahassawat_pic from "../picture/Groupmembers/sahassawat.jpg";
-import nathanan_pic from "../picture/Groupmembers/nathanan.jpg";
-import parintorn_pic from "../picture/Groupmembers/parintorn.jpg";
+import aoranun_pic from "../picture/GroupMembers/aoranun.jpg";
+import sirapa_pic from "../picture/GroupMembers/sirapa.jpg";
+import pakpong_pic from "../picture/GroupMembers/pakpong.jpg";
+import sirapop_pic from "../picture/GroupMembers/sirapop.jpg";
+import apiravit_pic from "../picture/GroupMembers/apiravit.jpg";
+import sahassawat_pic from "../picture/GroupMembers/sahassawat.jpg";
+import nathanan_pic from "../picture/GroupMembers/nathanan.jpg";
+import parintorn_pic from "../picture/GroupMembers/parintorn.jpg";
 
 const groupMembers = [
   {
