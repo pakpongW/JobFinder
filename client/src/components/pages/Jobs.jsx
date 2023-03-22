@@ -3,12 +3,15 @@ import axios from "axios";
 
 import AnimatedPage from "../AnimatedPage";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "../../Jobs.css";
 
 const Jobs = () => {
   const [posts, setPosts] = useState([]);
   const [showPosts, setShowposts] = useState([]);
   const [input, setInput] = useState("");
+  const [showButton, setShowButton] = useState(false);
 
   const fetchData = () => {
     axios
@@ -63,6 +66,20 @@ const Jobs = () => {
     handleSearch();
   }, [posts]);
 
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <AnimatedPage>
       <div className="search__container">
@@ -103,6 +120,14 @@ const Jobs = () => {
                 {new Date(post.createdAt).toLocaleString()}
               </p>
             </div>
+            {showButton && (
+              <button
+                className="btn btn-floating btn-lg rounded-circle "
+                onClick={handleClick}
+              >
+                <FontAwesomeIcon icon={faArrowUp} className="icon" />
+              </button>
+            )}
           </div>
         ))
       ) : (
