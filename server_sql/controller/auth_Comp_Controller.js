@@ -1,8 +1,8 @@
 const { Sequelize } = require("sequelize");
 const sequelize = new Sequelize(
-  "JobFinder_db",
+  "JobFinder_db10",
   "root",
-  "pamza2545", // Dont forget your password!!!
+  "12345678", // Dont forget your password!!!
   {
     host: "localhost",
     dialect: "mysql",

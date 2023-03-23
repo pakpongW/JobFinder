@@ -17,21 +17,24 @@ const Jobs = () => {
     axios
       .get(`${import.meta.env.VITE_APP_API}/posts`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setPosts(response.data);
+        setShowposts(response.data);
       })
       .catch((err) => alert(err));
   };
 
+  // use everytime input == ""
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [input == ""]);
 
-  const handleSearch = (e) => {
+  const handleSearch = () => {
+    // in the case of have value
+    console.log(input);
     // condition that add the post that parallel with keyword to Showposts list
     if (posts != null) {
       const Datalength = posts.length;
-      console.log(Datalength);
       let nodata = true; //
 
       for (let i = 0; i < Datalength; i++) {
@@ -60,11 +63,10 @@ const Jobs = () => {
     }
   };
 
-  const findBytag = () => {};
-
+  // use everytime input was changed
   useEffect(() => {
     handleSearch();
-  }, [posts]);
+  }, [input]);
 
   const handleScroll = () => {
     if (window.pageYOffset > 300) {
@@ -83,18 +85,18 @@ const Jobs = () => {
   return (
     <AnimatedPage>
       <div className="search__container">
-        <form onSubmit={(e) => handleSearch(e.preventDefault())}>
-          <input
-            id="keyword"
-            name="keyword"
-            className="search__input"
-            type="text"
-            placeholder="Search"
-            autoComplete="off"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          ></input>
-        </form>
+        <input
+          id="keyword"
+          name="keyword"
+          className="search__input"
+          type="text"
+          placeholder="Search"
+          autoComplete="off"
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        ></input>
       </div>
       {showPosts ? (
         showPosts.map((post, index) => (

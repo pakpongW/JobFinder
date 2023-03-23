@@ -1,9 +1,9 @@
 const { v4: uuidv4 } = require("uuid");
 const { Sequelize, where } = require("sequelize");
 const sequelize = new Sequelize(
-  "JobFinder_db",
+  "JobFinder_db40",
   "root",
-  "pamza2545", // Dont forget your password!!!
+  "12345678", // Dont forget your password!!!
   {
     host: "localhost",
     dialect: "mysql",
@@ -29,7 +29,7 @@ exports.createPost = (req, res) => {
   //userInfo = {userID, userName, userSub}
   var userInfo = jwt.verify(token, process.env.TOKEN_ENCODE);
   //collect userid
-  var userName = userInfo.userName
+  var userName = userInfo.userName;
   var ID = userInfo.userID;
   let today = new Date();
 
