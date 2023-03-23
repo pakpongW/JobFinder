@@ -174,7 +174,7 @@ const RegisterPage = () => {
               <input
                 type="submit"
                 value="register"
-                className="btn btn-primary"
+                className="btn btn-primary w-100"
               />
             </form>
           </div>

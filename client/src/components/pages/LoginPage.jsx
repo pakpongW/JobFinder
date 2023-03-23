@@ -52,7 +52,7 @@ const LoginPage = () => {
     <AnimatedPage>
       {/* {JSON.stringify(auth)} */}
       <div className="row featurette p-2">
-        <div className="col-md-6 my-auto p-3">
+        <div className="col-md-6 my-auto form-login ">
           <div className="text-center mb-4">
             <img className="logo-picture" src={Joblogo} />
           </div>
@@ -76,7 +76,11 @@ const LoginPage = () => {
               />
             </div>
             <br />
-            <input type="submit" value="Login" className="btn btn-primary" />
+            <input
+              type="submit"
+              value="Login"
+              className="btn btn-primary w-100"
+            />
           </form>
         </div>
         <div className="col-md-6">
