@@ -92,7 +92,7 @@ const EditPost = () => {
           {/* <textarea className='form-control' value={content} onChange={inputValue("content")}></textarea> */}
         </div>
         <div className="from-group">
-          <label>ผู้เขียน</label>
+          <label>ตำแหน่ง</label>
           <input
             type="text"
             className="form-control"

@@ -51,7 +51,7 @@ const LoginPage = () => {
   return (
     <AnimatedPage>
       {/* {JSON.stringify(auth)} */}
-      <div className="row featurette p-5">
+      <div className="row featurette p-2">
         <div className="col-md-6 my-auto p-3">
           <div className="text-center mb-4">
             <img className="logo-picture" src={Joblogo} />
